@@ -1,18 +1,92 @@
-# React + Vite
+# SSC Quiz Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive SSC/UPSC Quiz Platform built using React, Vite, Tailwind CSS, and Framer Motion.
 
-Currently, two official plugins are available:
+This project is designed to simulate a real competitive exam environment with premium UI/UX, dark mode, question palette, timer, bookmarks, progress tracking, and result analytics.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+# Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Quiz Features
+- Multiple Choice Questions (MCQs)
+- Question Navigation
+- Previous / Next Controls
+- Question Palette Drawer
+- Bookmark Questions
+- Progress Tracking
+- Attempted Question Counter
+- Auto Result Generation
+- Detailed Answer Review
+- Explanation / Solution Section
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## UI/UX Features
+- Modern Responsive Design
+- Dark Mode Support
+- Mobile Friendly Layout
+- Animated Transitions
+- Glassmorphism Header
+- Floating Action Buttons
+- Smooth Drawer Animation
+- Premium Card Design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Technical Features
+- React + Vite
+- Tailwind CSS
+- Framer Motion Animations
+- LocalStorage Persistence
+- Fullscreen Support
+- Keyboard Navigation
+- Realtime Timer
+- Component-Based Architecture
+
+---
+
+# Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion
+- Lucide React Icons
+
+---
+
+# Folder Structure
+
+```bash
+src/
+ ├── components/
+ │    ├── Header.jsx
+ │    ├── Navigation.jsx
+ │    ├── PaletteDrawer.jsx
+ │    ├── ProgressBar.jsx
+ │    ├── QuestionCard.jsx
+ │    └── ResultScreen.jsx
+ │
+ ├── data/
+ │    └── questions.js
+ │
+ ├── App.jsx
+ ├── main.jsx
+ └── index.css
+
+
+
+
+Clone Repository
+git clone YOUR_REPOSITORY_URL
+
+Navigate to Project
+cd ssc_prep
+
+Install Dependencies
+npm install
+
+Start Development Server
+npm run dev
+
