@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Header from "./Header";
-import ProgressBar from "./ProgressBar";
-import QuestionCard from "./QuestionCard";
 import Navigation from "./Navigation";
 import PaletteDrawer from "./PaletteDrawer";
 import ResultScreen from "./ResultScreen";
-
+import ProgressBar from "./ProgressBar.jsx";
+import QuestionCard from "./QuestionCard.jsx";
 
 
 function App() {
