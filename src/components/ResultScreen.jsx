@@ -29,7 +29,7 @@ const ResultScreen = ({
 
       if (userAns === undefined || userAns === null) {
         unattempted++;
-      } else if (userAns === q.answer) {
+      } else if (userAns + 1 === q.answer) {
         correct++;
       } else {
         wrong++;
@@ -100,7 +100,7 @@ Unattempted: ${stats.unattempted}
 
   return (
     <div className="max-w-5xl mx-auto p-4 md:p-6 pb-32">
-      
+
       {/* Score Card */}
       <motion.div
         initial={{ opacity: 0, y: 25 }}
@@ -127,17 +127,16 @@ Unattempted: ${stats.unattempted}
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mt-8">
-        
+
         {/* Correct */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className={`
             rounded-3xl p-6 text-center border shadow-lg
-            ${
-              isDarkMode
-                ? "bg-neutral-900 border-neutral-700"
-                : "bg-white border-gray-100"
+            ${isDarkMode
+              ? "bg-neutral-900 border-neutral-700"
+              : "bg-white border-gray-100"
             }
           `}
         >
@@ -162,10 +161,9 @@ Unattempted: ${stats.unattempted}
           transition={{ delay: 0.1 }}
           className={`
             rounded-3xl p-6 text-center border shadow-lg
-            ${
-              isDarkMode
-                ? "bg-neutral-900 border-neutral-700"
-                : "bg-white border-gray-100"
+            ${isDarkMode
+              ? "bg-neutral-900 border-neutral-700"
+              : "bg-white border-gray-100"
             }
           `}
         >
@@ -190,10 +188,9 @@ Unattempted: ${stats.unattempted}
           transition={{ delay: 0.2 }}
           className={`
             rounded-3xl p-6 text-center border shadow-lg
-            ${
-              isDarkMode
-                ? "bg-neutral-900 border-neutral-700"
-                : "bg-white border-gray-100"
+            ${isDarkMode
+              ? "bg-neutral-900 border-neutral-700"
+              : "bg-white border-gray-100"
             }
           `}
         >
@@ -214,7 +211,7 @@ Unattempted: ${stats.unattempted}
 
       {/* Action Buttons */}
       <div className="flex flex-wrap gap-4 justify-center mt-10">
-        
+
         {/* Restart */}
         <button
           onClick={restartQuiz}
@@ -280,10 +277,9 @@ Unattempted: ${stats.unattempted}
               animate={{ opacity: 1 }}
               className={`
                 rounded-3xl border p-6 shadow-lg
-                ${
-                  isDarkMode
-                    ? "bg-neutral-900 border-neutral-700"
-                    : "bg-white border-gray-100"
+                ${isDarkMode
+                  ? "bg-neutral-900 border-neutral-700"
+                  : "bg-white border-gray-100"
                 }
               `}
             >
@@ -299,7 +295,7 @@ Unattempted: ${stats.unattempted}
               <div className="space-y-3">
                 {[q.option1, q.option2, q.option3, q.option4].map(
                   (option, i) => {
-                    const isCorrect = i === q.answer;
+                    const isCorrect = i + 1 === q.answer;
                     const isUser = i === userAns;
 
                     return (
@@ -307,14 +303,13 @@ Unattempted: ${stats.unattempted}
                         key={i}
                         className={`
                           p-4 rounded-2xl border-2
-                          ${
-                            isCorrect
-                              ? "border-green-500 bg-green-100 text-green-800"
-                              : isUser
+                          ${isCorrect
+                            ? "border-green-500 bg-green-100 text-green-800"
+                            : isUser
                               ? "border-red-500 bg-red-100 text-red-800"
                               : isDarkMode
-                              ? "border-neutral-700 bg-neutral-800"
-                              : "border-gray-200 bg-gray-50"
+                                ? "border-neutral-700 bg-neutral-800"
+                                : "border-gray-200 bg-gray-50"
                           }
                         `}
                       >
@@ -333,10 +328,9 @@ Unattempted: ${stats.unattempted}
               <div
                 className={`
                   mt-6 p-5 rounded-2xl border-l-4
-                  ${
-                    isDarkMode
-                      ? "bg-blue-900/20 border-blue-400"
-                      : "bg-blue-50 border-blue-500"
+                  ${isDarkMode
+                    ? "bg-blue-900/20 border-blue-400"
+                    : "bg-blue-50 border-blue-500"
                   }
                 `}
               >

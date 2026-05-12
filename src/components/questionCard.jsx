@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Bookmark } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -20,6 +20,7 @@ const QuestionCard = ({
     question.option4,
   ];
 
+
   return (
     <motion.div
       key={currentIdx}
@@ -29,16 +30,15 @@ const QuestionCard = ({
       className={`
         rounded-2xl p-4 md:p-5
         shadow-2xl border transition-all duration-300
-        ${
-          isDarkMode
-            ? "bg-neutral-900 border-neutral-700"
-            : "bg-white border-gray-100"
+        ${isDarkMode
+          ? "bg-neutral-900 border-neutral-700"
+          : "bg-white border-gray-100"
         }
       `}
     >
       {/* Top Header */}
       <div className="flex justify-between items-start gap-4 mb-4">
-        
+
         {/* Question Number */}
         <div>
           <span className="text-xs uppercase tracking-widest font-bold text-blue-500">
@@ -55,10 +55,9 @@ const QuestionCard = ({
             transition-all duration-300
             hover:scale-105 active:scale-95
 
-            ${
-              bookmarks.has(currentIdx)
-                ? "bg-yellow-500 border-yellow-500 text-white"
-                : isDarkMode
+            ${bookmarks.has(currentIdx)
+              ? "bg-yellow-500 border-yellow-500 text-white"
+              : isDarkMode
                 ? "border-neutral-700 bg-neutral-800 text-white"
                 : "border-gray-300 bg-gray-50 text-gray-700"
             }
@@ -90,7 +89,6 @@ const QuestionCard = ({
       <div className="space-y-3">
         {options.map((option, i) => {
           const isSelected = userAnswers[currentIdx] === i;
-
           return (
             <motion.label
               key={i}
@@ -100,10 +98,9 @@ const QuestionCard = ({
                p-3.5 rounded-2xl border-2
                 cursor-pointer transition-all duration-300
 
-                ${
-                  isSelected
-                    ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20"
-                    : isDarkMode
+                ${isSelected
+                  ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20"
+                  : isDarkMode
                     ? "border-neutral-700 bg-neutral-800 hover:border-blue-500"
                     : "border-gray-200 bg-gray-50 hover:border-blue-400"
                 }
@@ -127,10 +124,9 @@ const QuestionCard = ({
               <div
                 className={`
                   flex-1 text-sm md:text-base leading-relaxed
-                  ${
-                    isDarkMode
-                      ? "text-neutral-100"
-                      : "text-gray-800"
+                  ${isDarkMode
+                    ? "text-neutral-100"
+                    : "text-gray-800"
                   }
                 `}
                 dangerouslySetInnerHTML={{
@@ -143,17 +139,17 @@ const QuestionCard = ({
       </div>
 
       {/* Solution */}
-      {userAnswers[currentIdx] !== undefined &&  (
+     {userAnswers[currentIdx] !== undefined && (
+        
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className={`
             mt-5 p-5 rounded-2xl border-l-4
 
-            ${
-              isDarkMode
-                ? "bg-blue-900/20 border-blue-400"
-                : "bg-blue-50 border-blue-500"
+            ${isDarkMode
+              ? "bg-blue-900/20 border-blue-400"
+              : "bg-blue-50 border-blue-500"
             }
           `}
         >
@@ -164,10 +160,9 @@ const QuestionCard = ({
           <div
             className={`
               text-sm md:text-base leading-relaxed
-              ${
-                isDarkMode
-                  ? "text-neutral-200"
-                  : "text-gray-700"
+              ${isDarkMode
+                ? "text-neutral-200"
+                : "text-gray-700"
               }
             `}
             dangerouslySetInnerHTML={{
