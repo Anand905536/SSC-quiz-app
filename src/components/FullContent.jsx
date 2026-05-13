@@ -4,8 +4,8 @@ import Header from "./Header";
 import Navigation from "./Navigation";
 import PaletteDrawer from "./PaletteDrawer";
 import ResultScreen from "./ResultScreen";
-import ProgressBar from "./ProgressBar.jsx";
-import QuestionCard from "./QuestionCard.jsx";
+import ProgressBar from "./ProgressBar";
+import QuestionCard from "./QuestionCard";
 
 
 function App() {
