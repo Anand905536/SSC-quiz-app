@@ -74,13 +74,11 @@ export default function HomePage() {
                 "Advent of Europeans",
                 "Revolt of 1857",
                 "Indian National Congress",
-                "Moderates and Extremists",
                 "Partition of Bengal",
                 "Gandhian Era",
                 "Revolutionary Movement",
-                "Constitutional Reforms",
-                "Freedom Struggle",
-                "Post Independence India",
+                "Civil Disobedience Movement",
+                "Quit India Movement"
             ],
         },
         {
@@ -389,13 +387,13 @@ export default function HomePage() {
 
                                 {/* BUTTONS */}
                                 <div className="flex gap-3 mt-6">
-                                    <button className="flex-1 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all duration-300">
+                                    {/* <button className="flex-1 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all duration-300">
                                         Start Quiz
                                     </button>
 
                                     <button className="w-14 rounded-2xl bg-gray-100 dark:bg-neutral-800 hover:scale-105 transition-all duration-300 text-xl">
                                         ⭐
-                                    </button>
+                                    </button> */}
                                 </div>
                             </div>
                         </div>

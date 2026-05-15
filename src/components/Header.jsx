@@ -42,30 +42,30 @@ const Header = ({
       `}
     >
       <div className="max-w-6xl mx-auto px-4 py-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-between">
           
           {/* Title */}
           <div>
             <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-              <span className="text-blue-600 dark:text-blue-400">
+              {/* <span className="text-blue-600 dark:text-blue-400">
                 SSC Quiz Platform
-              </span>
+              </span> */}
             </h1>
 
-            <p
+            {/* <p
               className={`text-sm mt-1 ${
                 isDarkMode ? "text-neutral-400" : "text-gray-500"
               }`}
             >
               Practice • Revise • Improve
-            </p>
+            </p> */}
           </div>
 
           {/* Right Controls */}
           <div className="flex items-center gap-3">
             
             {/* Timer */}
-            <div
+            {/* <div
               className={`
                 px-5 py-2 rounded-xl
                 font-mono text-lg font-bold
@@ -80,7 +80,7 @@ const Header = ({
               `}
             >
               {formatTime(timeLeft)}
-            </div>
+            </div> */}
 
             {/* Theme Toggle */}
             <button
