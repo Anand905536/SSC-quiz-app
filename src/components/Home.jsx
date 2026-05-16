@@ -39,6 +39,7 @@ export default function HomePage() {
                 "Buddhism",
                 "Jainism",
                 "Mauryan Empire",
+                "Post Mauryan Empire",
                 "Gupta Empire",
                 "Sangam Age",
                 "Foreign Invasions",
