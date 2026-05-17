@@ -177,6 +177,20 @@ export default function HomePage() {
                 "World Geography GK",
             ],
         },
+        {
+            id: 9,
+            title: "Current Affairs",
+            icon: "📚",
+            color: "from-violet-500 to-purple-700",
+            totalQuestions: 1000,
+            subChapters: [
+                "Jan 2025",
+                "Feb 2025",
+                "March 2025",
+                "April 2025",
+                "May 2025",
+            ],
+        },
     ];
 
     const [openCard, setOpenCard] = React.useState(null);

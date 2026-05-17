@@ -28,8 +28,8 @@ const QuestionCard = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
       className={`
-        rounded-2xl p-4 md:p-5
-        shadow-2xl border transition-all duration-300
+        rounded-xl p-3 md:p-4
+  shadow-xl border mb-8 transition-all duration-300
         ${isDarkMode
           ? "bg-neutral-900 border-neutral-700"
           : "bg-white border-gray-100"
@@ -51,7 +51,7 @@ const QuestionCard = ({
           onClick={toggleBookmark}
           className={`
             flex items-center gap-2
-            px-4 py-2 rounded-xl border
+            px-3 py-1.5 rounded-xl border
             transition-all duration-300
             hover:scale-105 active:scale-95
 
@@ -64,7 +64,7 @@ const QuestionCard = ({
           `}
         >
           <Bookmark
-            size={18}
+            size={16}
             fill={bookmarks.has(currentIdx) ? "currentColor" : "none"}
           />
 
@@ -77,7 +77,7 @@ const QuestionCard = ({
       {/* Question */}
       <div
         className={`
-          text-base md:text-lg leading-relaxed font-medium mb-5
+          text-sm md:text-base leading-relaxed font-medium mb-5
           ${isDarkMode ? "text-white" : "text-gray-800"}
         `}
         dangerouslySetInnerHTML={{
@@ -86,7 +86,7 @@ const QuestionCard = ({
       />
 
       {/* Options */}
-      <div className="space-y-3">
+      <div className="space-y-2">
         {options.map((option, i) => {
           const isSelected = userAnswers[currentIdx] === i;
           return (
@@ -94,7 +94,7 @@ const QuestionCard = ({
               key={i}
               whileTap={{ scale: 0.98 }}
               className={`
-                flex items-start gap-4
+                flex items-start gap-2
                p-3.5 rounded-2xl border-2
                 cursor-pointer transition-all duration-300
 
@@ -123,7 +123,7 @@ const QuestionCard = ({
               {/* Option Content */}
               <div
                 className={`
-                  flex-1 text-sm md:text-base leading-relaxed
+                  flex-1 text-xs md:text-sm leading-relaxed
                   ${isDarkMode
                     ? "text-neutral-100"
                     : "text-gray-800"
@@ -139,13 +139,13 @@ const QuestionCard = ({
       </div>
 
       {/* Solution */}
-     {userAnswers[currentIdx] !== undefined && (
-        
+      {userAnswers[currentIdx] !== undefined && (
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className={`
-            mt-5 p-5 rounded-2xl border-l-4
+            mt-4 p-3 rounded-xl border-l-4
 
             ${isDarkMode
               ? "bg-blue-900/20 border-blue-400"
